@@ -15,6 +15,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     setToken(null);
   };
 
+  //Funciones a futuro manteniendo centralizado el state
+
   return (
     <AuthContext.Provider value={{ token, login, logout }}>
       {children}

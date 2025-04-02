@@ -4,7 +4,7 @@ import { Button } from "../../../components/ui/Button/Button";
 import { Input } from "../../../components/ui/Input/Input";
 import styles from "./Login.module.css";
 
-export const Login = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
@@ -47,3 +47,5 @@ export const Login = () => {
     </div>
   );
 };
+
+export default Login;

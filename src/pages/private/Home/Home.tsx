@@ -4,7 +4,7 @@ import { fetchPosts } from "../../../api/publicApi/posts";
 import { ListVirtualizada } from "../../../components/List/List";
 import styles from "./Home.module.css";
 
-export const Home = () => {
+const Home = () => {
   const { logout } = useAuth();
   const [posts, setPosts] = useState<any[]>([]);
   const [items, setItems] = useState<any[]>([]);
@@ -48,3 +48,4 @@ export const Home = () => {
     </div>
   );
 };
+export default Home;
