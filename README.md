@@ -21,6 +21,13 @@ Aplicación React con autenticación simulada que muestra un dashboard con lista
 - CSS Modules
 - react-window
 
+## Mejoras propuestas para los llamados al backend
+
+- Crear o utilizar sistema o libreria que ayude a caching de datos para evitar llamado innecesarios a la api.
+- Paginar desde el back o front la respuesta del endpoint, para registros con contenido extenso.
+- Implementar cancelacion de peticiones cuando no sean necesarias.
+- Manejo de lazy loading para la espera de las peticiones.
+
 ## Instalación
 
 ```bash
