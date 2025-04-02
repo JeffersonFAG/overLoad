@@ -26,7 +26,6 @@ const Row = ({
   >
     <div className={styles.tableCell}>{data[index].id}</div>
     <div className={styles.tableCell}>{data[index].title}</div>
-    {/* Añade más celdas según necesites */}
   </div>
 );
 
@@ -39,9 +38,9 @@ export const ListVirtualizada = ({ items }: ListProps) => {
       </div>
 
       <List
-        height={600} // Altura fija del contenedor
+        height={600}
         itemCount={items.length}
-        itemSize={50} // Altura de cada fila
+        itemSize={50}
         width="100%"
         itemData={items}
       >

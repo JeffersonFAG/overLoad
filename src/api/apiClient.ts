@@ -1,12 +1,11 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "https://jsonplaceholder.typicode.com", // API pública (ejemplo)
+  baseURL: "https://jsonplaceholder.typicode.com",
 });
 
-// Interceptor para añadir token fake a las requests
 apiClient.interceptors.request.use((config) => {
-  const token = localStorage.getItem("fakeToken"); // O sessionStorage
+  const token = localStorage.getItem("fakeToken");
   if (token) {
     config.headers.Authorization = `Bearer ${token}`;
   }

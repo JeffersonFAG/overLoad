@@ -5,9 +5,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [token, setToken] = useState<string | null>(null);
 
   const login = async (email: string, password: string) => {
-    // Fake login: Simular respuesta 200
     const fakeToken = "fake-jwt-token";
-    localStorage.setItem("fakeToken", fakeToken); // Persistencia en memoria
+    localStorage.setItem("fakeToken", fakeToken);
     setToken(fakeToken);
   };
 

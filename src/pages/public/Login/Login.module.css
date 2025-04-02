@@ -1,4 +1,3 @@
-/* Contenedor principal */
 .loginContainer {
   display: flex;
   justify-content: center;
@@ -8,7 +7,6 @@
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-/* Tarjeta de login */
 .loginCard {
   width: 100%;
   max-width: 400px;
@@ -19,7 +17,6 @@
   text-align: center;
 }
 
-/* Texto */
 .title {
   font-size: 2rem;
   font-weight: 700;
@@ -33,7 +30,6 @@
   font-size: 1rem;
 }
 
-/* Formulario */
 .form {
   display: flex;
   flex-direction: column;
@@ -62,7 +58,6 @@
   box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.1);
 }
 
-/* Botón */
 .loginButton {
   width: 100%;
   padding: 1rem;
@@ -80,7 +75,6 @@
   background-color: #535bf2;
 }
 
-/* Responsive */
 @media (max-width: 480px) {
   .loginCard {
     padding: 1.5rem;
