@@ -8,15 +8,14 @@ export const Home = () => {
   const { logout } = useAuth();
   const [posts, setPosts] = useState<any[]>([]);
   const [items, setItems] = useState<any[]>([]);
+
   useEffect(() => {
-    // Fetch de 2000 elementos (ejemplo con JSONPlaceholder)
     fetchPosts().then((data: any) => setPosts(data.slice(0, 2000)));
   }, []);
 
   useEffect(() => {
-    // Simula carga de 2000 items
     const fakeItems = Array.from({ length: 2000 }, (_, i) => ({
-      id: i + 1,
+      id: i + 2001,
       title: `Elemento ${i + 1}`,
       body: `Descripción del elemento ${i + 1}`,
     }));
@@ -25,10 +24,27 @@ export const Home = () => {
 
   return (
     <div className={styles.container}>
-      <button onClick={logout} className={styles.logoutButton}>
-        Cerrar sesión
-      </button>
-      <ListVirtualizada items={[...posts, ...items]} />
+      <div className={styles.header}>
+        <h1 className={styles.title}>Dashboard</h1>
+        <button onClick={logout} className={styles.logoutButton}>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          Cerrar sesión
+        </button>
+      </div>
+
+      <div className={styles.listContainer}>
+        <ListVirtualizada items={[...posts, ...items]} />
+      </div>
     </div>
   );
 };
