@@ -1,0 +1,57 @@
+/* Contenedor principal */
+.tableWrapper {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Cabecera */
+.tableHeader {
+  display: grid;
+  grid-template-columns: 80px 1fr; /* Ajusta según tus columnas */
+  background-color: #646cff;
+  color: white;
+  font-weight: 600;
+}
+
+.headerCell {
+  padding: 1rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Filas */
+.tableRow {
+  display: grid;
+  grid-template-columns: 80px 1fr; /* Debe coincidir con la cabecera */
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.evenRow {
+  background-color: #f8f9fa;
+}
+
+.tableRow:hover {
+  background-color: #e9ecef;
+}
+
+/* Celdas */
+.tableCell {
+  padding: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
